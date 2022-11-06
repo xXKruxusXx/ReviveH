@@ -1,0 +1,134 @@
+--Kruxus Hub(some error not fixed)
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local TextButton_3 = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.Position = UDim2.new(0.104085602, 0, 0.212218642, 0)
+Frame.Size = UDim2.new(0, 491, 0, 304)
+
+UICorner.Parent = Frame
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0.0346232243, 0, 0.128289521, 0)
+TextButton.Size = UDim2.new(0, 136, 0, 49)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Random RainFruit"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.Position = UDim2.new(0.0346232243, 0, 0.417763203, 0)
+TextButton_2.Size = UDim2.new(0, 136, 0, 49)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "Remove Material"
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextSize = 14.000
+
+TextButton_3.Parent = Frame
+TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.Position = UDim2.new(0.0326499641, 0, 0.70228678, 0)
+TextButton_3.Size = UDim2.new(0, 136, 0, 49)
+TextButton_3.Font = Enum.Font.SourceSans
+TextButton_3.Text = "Kick All"
+TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.TextSize = 14.000
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.458248466, 0, 0.161184207, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "KruXus Hub"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+-- Scripts:
+
+local function NOQC_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Workspace:GetChildren())do
+			if v:IsA("Part") then
+				v.Material = "SmoothPlastic"
+			elseif v:IsA("UnionOperation") then
+				v.Material = "SmoothPlastic"
+			elseif v:IsA("Model") then
+				for i, part in pairs(v:GetChildren()) do
+					if part:IsA("Part") then
+						part.Material = "SmoothPlastic"
+					elseif part:IsA("WedgePart") then
+						part.Material = "SmoothPlastic"
+					elseif part:IsA("UnionOperation") then
+						part.Material = "SmoothPlastic"
+					elseif part:IsA("Model") then
+						for i, part1 in pairs(part:GetChildren()) do
+							if part1:IsA("Part") then
+								part1.Material = "SmoothPlastic"
+							elseif part1:IsA("UnionOperation") then
+								part1.Material = "SmoothPlastic"
+							elseif part1:IsA("WedgePart") then
+								part1.Material = "SmoothPlastic"
+							elseif part1:IsA("Model") then
+								for i, part2 in pairs(part1:GetChildren()) do
+									if part2:IsA("Part") then
+										part2.Material = "SmoothPlastic"
+									elseif part2:IsA("UnionOperation") then
+										part2.Material = "SmoothPlastic"
+									elseif part2:IsA("WedgePart") then
+										part2.Material = "SmoothPlastic"
+									elseif part2:IsA("Model") then
+										for i, part3 in pairs(part2:GetChildren()) do
+											if part3:IsA("Part") then
+												part3.Material = "SmoothPlastic"
+											elseif part3:IsA("UnionOperation") then
+												part3.Material = "SmoothPlastic"
+											elseif part3:IsA("WedgePart") then
+												part3.Material = "SmoothPlastic"
+											end
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(NOQC_fake_script)()
+local function WDSQHY_fake_script() -- Frame.Script 
+	local script = Instance.new('Script', Frame)
+
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+end
+coroutine.wrap(WDSQHY_fake_script)()
+local function QXHS_fake_script() -- TextButton_3.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_3)
+
+	local LocalPlayer = game:GetService("Players").LocalPlayer
+	script.Parent.Activated:Connect(function()
+		LocalPlayer:Kick("Kicked All!")
+	end)
+end
+coroutine.wrap(QXHS_fake_script)()
